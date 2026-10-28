@@ -1,0 +1,34 @@
+POZNÁVAČKA DRUHOV – inštalovateľná aplikácia (PWA)
+
+Obsah: index.html (celá aplikácia), manifest.webmanifest, sw.js (offline režim), priečinok icons.
+Súbory musia ostať v jednom priečinku. Priamo z počítača (dvojklik) sa nainštalovať nedá,
+musia byť na webe cez HTTPS. Nižšie sú dva bezplatné spôsoby.
+
+1) NAHRATIE NA WEB (len raz)
+ A) Netlify Drop: na stránke app.netlify.com/drop pretiahni celý rozbalený priečinok.
+    Po chvíli dostaneš odkaz (adresa.netlify.app).
+ B) GitHub Pages: vytvor nový verejný repozitár, nahraj do neho všetky súbory z priečinka
+    (cez "Add file" > "Upload files") a v Settings > Pages zapni publikovanie z hlavnej vetvy.
+    Názvy tlačidiel sa môžu líšiť, postup nájdeš v dokumentácii služby.
+
+2) PRIDANIE NA PLOCHU
+ - Android (Chrome): otvor odkaz, menu (tri bodky) > "Inštalovať aplikáciu" alebo "Pridať na plochu".
+ - iPhone (Safari): tlačidlo Zdieľať > "Pridať na plochu". Musí to byť Safari.
+ - Počítač (Chrome/Edge): ikona inštalácie v pravej časti adresného riadka.
+ Aplikácia sa potom otvára na celú obrazovku bez prehliadača.
+
+3) OFFLINE
+ Pri prvom otvorení sa aplikácia stiahne do zariadenia (cca 13 MB, drž sa Wi-Fi). Potom funguje
+ aj bez internetu. Zmeny a nové verzie sa načítajú, keď sa pripojíš a aplikáciu zatvoríš a znovu otvoríš.
+
+4) NOVÁ VERZIA
+ Keď dostaneš novú verziu, nahraď súbory na hostingu a v sw.js zvýš číslo v riadku
+ const CACHE = "poznavacka-v2"; (napr. na v3). Inak zariadenia ostanú pri starej verzii.
+
+Poznámka: nahrávky vtákov pochádzajú z xeno-canto.org (licencia CC BY-NC-SA), autori sú uvedení pod kartou.
+Aplikácia je určená na štúdium, nie na komerčné použitie.
+
+ZDIEĽANIE
+ Po nahratí na web pošli kamarátom len odkaz (adresu z Netlify alebo GitHub Pages). V aplikácii je aj
+ tlačidlo "Zdieľať aplikáciu" v menu, ktoré odkaz pošle cez WhatsApp, Messenger a podobne.
+ Každý si ju potom nainštaluje sám na svoje zariadenie.
